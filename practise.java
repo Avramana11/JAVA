@@ -94,3 +94,47 @@ public class practise {
     }
 }
 
+
+
+// Problem Description:
+// Write a program to print a diamond pattern of asterisks (*) with a given number of rows.
+
+// Input: n = 5
+// Output:
+// *
+// ***
+// *****
+// *******
+// *********
+// *******
+// *****
+// ***
+// *
+
+// Explanation:
+// The pattern consists of two parts: the upper half and the lower half. The upper half has n rows, and the lower half has n-1 rows. Each row contains spaces followed by asterisks.
+
+
+public class DiamondPattern {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = i; j < n; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = n - 1; i >= 1; i--) {
+            for (int j = n; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
